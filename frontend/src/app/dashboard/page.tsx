@@ -9,7 +9,7 @@ const Page = () => {
   }
 
   const getCats = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/cats`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cats`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

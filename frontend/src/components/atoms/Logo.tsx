@@ -5,6 +5,7 @@ export const Logo = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSV
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 805.25 175.56"
+      fill="none"
       {...props}
     >
       <defs>
