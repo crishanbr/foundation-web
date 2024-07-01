@@ -6,6 +6,7 @@ import { BreedsModule } from './breeds/breeds.module';
 import { CatsModule } from './cats/cats.module';
 import { UsersModule } from './users/users.module';
 import { EventsModule } from './events/events.module';
+import { JobModule } from './job/job.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { EventsModule } from './events/events.module';
     UsersModule,
     AuthModule,
     EventsModule,
+    JobModule,
   ],
   controllers: [],
   providers: [],

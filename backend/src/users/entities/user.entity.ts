@@ -14,15 +14,24 @@ export class User {
   @Column()
   name: string;
 
+  @Column({ unique: true })
+  username: string;
+
   @Column({ unique: true, nullable: false })
   email: string;
 
   @Column({ nullable: false, select: false })
   password: string;
 
-  @Column({ type: 'enum', default: Role.USER, enum: Role })
-  role: Role;
+  @Column({ type: 'varchar', nullable: false, default: 'USER' })
+  role: string;
 
-  @DeleteDateColumn()
+  @Column({ nullable: true })
+  phone: string;
+
+  @Column({ nullable: true })
+  direction: string;
+
+  @DeleteDateColumn({ nullable: true })
   deletedAt: Date;
 }
