@@ -24,7 +24,7 @@ export class User {
   password: string;
 
   @Column({ type: 'varchar', nullable: false, default: 'USER' })
-  role: string;
+  role: Role;
 
   @Column({ nullable: true })
   phone: string;

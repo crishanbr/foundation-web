@@ -16,10 +16,6 @@ export class CreateUserDto {
   @IsOptional()
   username?: string;
 
-  @IsString({ each: true })
-  @IsOptional()
-  role?: string;
-
   @IsString()
   @IsOptional()
   phone?: string;
