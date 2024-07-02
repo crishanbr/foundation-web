@@ -7,6 +7,7 @@ import {
 } from 'typeorm';
 import { Role } from '../../common/enums/rol.enum';
 import { Event } from 'src/events/entities/event.entity';
+import { Agreement } from 'src/agreement/entities/agreement.entity';
 
 @Entity()
 export class User {
@@ -39,5 +40,8 @@ export class User {
 
   @OneToMany(() => Event, event => event.user)
   events: Event[];
+
+  @OneToMany(() => Agreement, agreement => agreement.user)
+  agreements: Agreement[];
   
 }

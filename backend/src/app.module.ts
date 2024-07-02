@@ -8,6 +8,7 @@ import { UsersModule } from './users/users.module';
 import { EventsModule } from './events/events.module';
 import { JobModule } from './job/job.module';
 import { InternshipModule } from './internship/internship.module';
+import { AgreementModule } from './agreement/agreement.module';
 
 @Module({
   imports: [
@@ -42,6 +43,7 @@ import { InternshipModule } from './internship/internship.module';
     EventsModule,
     JobModule,
     InternshipModule,
+    AgreementModule,
   ],
   controllers: [],
   providers: [],
