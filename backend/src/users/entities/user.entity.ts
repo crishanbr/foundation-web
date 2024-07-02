@@ -3,13 +3,15 @@ import {
   DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
+  OneToMany,
 } from 'typeorm';
 import { Role } from '../../common/enums/rol.enum';
+import { Event } from 'src/events/entities/event.entity';
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column()
   name: string;
@@ -34,4 +36,8 @@ export class User {
 
   @DeleteDateColumn({ nullable: true })
   deletedAt: Date;
+
+  @OneToMany(() => Event, event => event.user)
+  events: Event[];
+  
 }
